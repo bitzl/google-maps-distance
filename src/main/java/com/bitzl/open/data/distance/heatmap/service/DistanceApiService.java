@@ -1,0 +1,34 @@
+package com.bitzl.open.data.distance.heatmap.service;
+
+import com.bitzl.open.data.distance.heatmap.apis.GoogleDistanceApi;
+import com.bitzl.open.data.distance.heatmap.model.location.Coordinate;
+import com.bitzl.open.data.distance.heatmap.model.api.TravelInfo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
+public class DistanceApiService {
+
+    private GoogleDistanceApi api;
+
+    @Autowired
+    public DistanceApiService(GoogleDistanceApi api) {
+        this.api = api;
+    }
+
+    public TravelInfo query(String apiKey, List<Coordinate> origins, Coordinate destination) {
+        return api.query(apiKey, encode(origins), encode(destination));
+    }
+
+    String encode(List<Coordinate> coordinates) {
+        return coordinates.stream().map(Coordinate::asString).collect(Collectors.joining("|"));
+    }
+
+    String encode(Coordinate coordinate) {
+        return coordinate.asString();
+    }
+
+}
