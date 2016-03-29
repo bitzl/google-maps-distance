@@ -10,7 +10,7 @@ public class CsvRow {
 
     private List<String> columns;
 
-    private static final String  SEPARATOR = ";";
+    public static final String SEPARATOR = ";";
 
     public CsvRow() {
         this.columns = new ArrayList<>();
@@ -34,7 +34,7 @@ public class CsvRow {
         add(detail.getText());
     }
 
-    private void emptyColumn() {
+    public void emptyColumn() {
         add("");
     }
 
