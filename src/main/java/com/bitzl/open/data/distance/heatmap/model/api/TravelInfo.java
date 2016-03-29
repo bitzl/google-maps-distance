@@ -8,10 +8,10 @@ import java.util.List;
 public class TravelInfo {
 
     @SerializedName("destination_addresses")
-    List<String> destinationAddresses;
+    private List<String> destinationAddresses;
     @SerializedName("origin_addresses")
-    List<String> originAddresses;
-    List<Row> rows;
+    private List<String> originAddresses;
+    private List<Row> rows;
 
     public List<String> getDestinationAddresses() {
         return destinationAddresses;
