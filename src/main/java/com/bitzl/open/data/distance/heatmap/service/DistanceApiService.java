@@ -1,8 +1,8 @@
 package com.bitzl.open.data.distance.heatmap.service;
 
 import com.bitzl.open.data.distance.heatmap.apis.GoogleDistanceApi;
-import com.bitzl.open.data.distance.heatmap.model.location.Coordinate;
 import com.bitzl.open.data.distance.heatmap.model.api.TravelInfo;
+import com.bitzl.open.data.distance.heatmap.model.location.Coordinate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

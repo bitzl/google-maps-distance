@@ -1,12 +1,10 @@
 package com.bitzl.open.data.distance.heatmap.model.location;
 
 
-import com.bitzl.open.data.distance.heatmap.model.location.Coordinate;
 import org.junit.Test;
 
 import java.util.List;
 
-import static com.bitzl.open.data.distance.heatmap.model.location.Coordinate.randomSample;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.assertThat;
