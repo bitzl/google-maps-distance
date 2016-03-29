@@ -18,7 +18,8 @@ public class CsvRowTest {
     @Test
     public void emptyColumnShouldCreateNewColumn() {
         row.emptyColumn();
-        assertThat(row.toString(), is(CsvRow.SEPARATOR));
+        row.add("X");
+        assertThat(row.toString(), is(CsvRow.SEPARATOR + "X"));
     }
 
 }
