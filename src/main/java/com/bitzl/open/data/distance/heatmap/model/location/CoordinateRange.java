@@ -6,6 +6,13 @@ public class CoordinateRange {
     private Range latitude;
     private Range longitude;
 
+    CoordinateRange() {}
+
+    CoordinateRange(Range latitude, Range longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
+
     public Range getLatitude() {
         return latitude;
     }

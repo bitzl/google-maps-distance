@@ -25,6 +25,11 @@ public class CsvRow {
     }
 
     public void add(Detail detail) {
+        if (detail == null) {
+            add(""); // Add empty column
+            add(""); // Add empty column
+            return;
+        }
         add(detail.getValue());
         add(detail.getText());
     }

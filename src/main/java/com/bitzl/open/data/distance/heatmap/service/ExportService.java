@@ -35,7 +35,7 @@ public class ExportService {
         final List<Row> travelRows = travelInfo.getRows();
         List<String> rows = new ArrayList<>();
         for (int i = 0; i  < rowCount; i++) {
-            rows.add(createRow(origins.get(0), originAdresses.get(0), travelRows.get(0).getElements().get(0)));
+            rows.add(createRow(origins.get(i), originAdresses.get(i), travelRows.get(i).getElements().get(0)));
         }
         return rows;
     }
