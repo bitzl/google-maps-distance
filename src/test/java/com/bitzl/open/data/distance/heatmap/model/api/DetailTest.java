@@ -1,14 +1,10 @@
 package com.bitzl.open.data.distance.heatmap.model.api;
 
-import org.hamcrest.BaseMatcher;
-import org.hamcrest.Description;
-import org.hamcrest.Matcher;
 import org.junit.Before;
 import org.junit.Test;
 
-import static javafx.scene.input.KeyCode.T;
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 
 public class DetailTest {
