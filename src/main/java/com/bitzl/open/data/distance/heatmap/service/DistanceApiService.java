@@ -23,11 +23,11 @@ public class DistanceApiService {
         return api.query(apiKey, encode(origins), encode(destination));
     }
 
-    String encode(List<Coordinate> coordinates) {
+    public String encode(List<Coordinate> coordinates) {
         return coordinates.stream().map(Coordinate::asString).collect(Collectors.joining("|"));
     }
 
-    String encode(Coordinate coordinate) {
+    public String encode(Coordinate coordinate) {
         return coordinate.asString();
     }
 
