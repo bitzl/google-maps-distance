@@ -1,4 +1,6 @@
 # Travel Distance Matrix
+[![Build Status](https://travis-ci.org/bitzl/google-maps-distance.svg?branch=master)](https://travis-ci.org/bitzl/google-maps-distance)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/80886f5c2ab14794b78b9e85114cb7e5)](https://www.codacy.com/app/marcus_2/maps-distance-matrix)
 
 This software creates a list of travel information from random locations to a certain destination using the Google Maps Distance API. Requirements are specified in a YAML file:
 
