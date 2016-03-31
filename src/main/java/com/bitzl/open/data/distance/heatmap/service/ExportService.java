@@ -1,7 +1,7 @@
 package com.bitzl.open.data.distance.heatmap.service;
 
 import com.bitzl.open.data.distance.heatmap.model.CsvRow;
-import com.bitzl.open.data.distance.heatmap.model.api.Element;
+import com.bitzl.open.data.distance.heatmap.model.api.Route;
 import com.bitzl.open.data.distance.heatmap.model.api.Row;
 import com.bitzl.open.data.distance.heatmap.model.api.TravelInfo;
 import com.bitzl.open.data.distance.heatmap.model.location.Coordinate;
@@ -18,14 +18,14 @@ public class ExportService {
 
     private static final String HEADER = "latitude;longitude;address;distance;distanceText;duration;durationText;status";
 
-    String createRow(Coordinate origin, String originAddress, Element element) {
+    String createRow(Coordinate origin, String originAddress, Route route) {
         CsvRow row = new CsvRow();
         row.add(origin.getLatitude());
         row.add(origin.getLongitude());
         row.add(originAddress);
-        row.add(element.getDistance());
-        row.add(element.getDuration());
-        row.add(element.getStatus());
+        row.add(route.getDistance());
+        row.add(route.getDuration());
+        row.add(route.getStatus());
         return row.toString();
     }
 
@@ -35,7 +35,7 @@ public class ExportService {
         final List<Row> travelRows = travelInfo.getRows();
         List<String> rows = new ArrayList<>();
         for (int i = 0; i  < rowCount; i++) {
-            rows.add(createRow(origins.get(i), originAdresses.get(i), travelRows.get(i).getElements().get(0)));
+            rows.add(createRow(origins.get(i), originAdresses.get(i), travelRows.get(i).getRoutes().get(0)));
         }
         return rows;
     }

@@ -1,11 +1,9 @@
 package com.bitzl.open.data.distance.heatmap.model.api;
 
-/**
- * Created by marcu on 28.03.2016.
- */
+
 public class Detail {
-    String text;
-    Long value;
+    private String text;
+    private Long value;
 
     public String getText() {
         return text;

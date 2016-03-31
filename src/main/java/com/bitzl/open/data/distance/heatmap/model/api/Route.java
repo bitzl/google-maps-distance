@@ -1,11 +1,11 @@
 package com.bitzl.open.data.distance.heatmap.model.api;
 
 
-public class Element {
+public class Route {
 
-    Detail distance;
-    Detail duration;
-    String status;
+    private Detail distance;
+    private Detail duration;
+    private String status;
 
     public Detail getDistance() {
         return distance;

@@ -1,17 +1,21 @@
 package com.bitzl.open.data.distance.heatmap.model.api;
 
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class Row {
-    List<Element> elements;
 
-    public List<Element> getElements() {
-        return elements;
+    @SerializedName("elements")
+    private List<Route> routes;
+
+    public List<Route> getRoutes() {
+        return routes;
     }
 
-    public void setElements(List<Element> elements) {
-        this.elements = elements;
+    public void setRoutes(List<Route> routes) {
+        this.routes = routes;
     }
 
 }
