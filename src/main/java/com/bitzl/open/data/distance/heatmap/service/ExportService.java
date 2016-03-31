@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +19,7 @@ public class ExportService {
 
     private static final String HEADER = "latitude;longitude;address;distance;distanceText;duration;durationText;status";
 
-    String createRow(Coordinate origin, String originAddress, Route route) {
+    private String createRow(Coordinate origin, String originAddress, Route route) {
         CsvRow row = new CsvRow();
         row.add(origin.getLatitude());
         row.add(origin.getLongitude());
@@ -29,7 +30,7 @@ public class ExportService {
         return row.toString();
     }
 
-    List<String> createRows(List<Coordinate> origins, TravelInfo travelInfo) {
+    private List<String> createRows(List<Coordinate> origins, TravelInfo travelInfo) {
         final int rowCount = origins.size();
         final List<String> originAdresses = travelInfo.getOriginAddresses();
         final List<Row> travelRows = travelInfo.getRows();
@@ -40,31 +41,31 @@ public class ExportService {
         return rows;
     }
 
-    public void save(String filename, List<Coordinate> origins, TravelInfo travelInfo) {
-        File file = new File(filename);
-        if (!file.exists()) {
-            writeHeader(file);
-        }
-        appendContent(file, createRows(origins, travelInfo));
+    public void save(Writer writer, List<Coordinate> origins, TravelInfo travelInfo) throws IOException {
+        appendContent(writer, createRows(origins, travelInfo));
     }
 
-    private void writeHeader(File file) {
-        try (FileWriter writer = new FileWriter(file)) {
-            writer.write(HEADER);
-            writer.write("\n");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void appendContent(File file, List<String> rows) {
-        try (FileWriter writer = new FileWriter(file, true)) {
-            for (String row : rows) {
-                writer.write(row);
-                writer.write("\n");
+    public void save(String filename, List<Coordinate> origins, TravelInfo travelInfo) throws IOException {
+        try (FileWriter writer = new FileWriter(filename, true)) {
+            if (fileIsEmpty(filename)) {
+                writeHeader(writer);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+            appendContent(writer, createRows(origins, travelInfo));
+        }
+    }
+
+    private boolean fileIsEmpty(String filename) {
+        return new File(filename).length() == 0;
+    }
+    private void writeHeader(Writer writer) throws IOException {
+        writer.write(HEADER);
+        writer.write("\n");
+    }
+
+    private void appendContent(Writer writer, List<String> rows) throws IOException {
+        for (String row : rows) {
+            writer.write(row);
+            writer.write("\n");
         }
     }
 }
