@@ -28,4 +28,9 @@ public class RangeTest {
         new Range(values);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void constructorShouldThrowExceptionIfMinIsLargerThanMax() {
+        new Range(10, 1);
+    }
+
 }
