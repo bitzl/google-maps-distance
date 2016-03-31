@@ -5,6 +5,13 @@ public class Detail {
     private String text;
     private Long value;
 
+    public Detail() {}
+
+    public Detail(String text, Long value) {
+        setText(text);
+        setValue(value);
+    }
+
     public String getText() {
         return text;
     }
