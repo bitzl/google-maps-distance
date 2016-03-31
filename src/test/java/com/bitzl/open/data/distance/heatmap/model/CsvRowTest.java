@@ -32,4 +32,11 @@ public class CsvRowTest {
         assertThat(row.toString(), is("12.0" + CsvRow.SEPARATOR + "ABC"));
     }
 
+
+    @Test
+    public void addShouldCreateTwoEmptyColumnsIfDetailIsNull() {
+        Detail detail = null;
+        row.add(detail);
+        assertThat(row.toString(), is(CsvRow.SEPARATOR));
+    }
 }
