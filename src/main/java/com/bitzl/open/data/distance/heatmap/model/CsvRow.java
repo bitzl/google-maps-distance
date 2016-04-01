@@ -41,4 +41,16 @@ public class CsvRow {
     public String toString() {
         return String.join(SEPARATOR, columns);
     }
+
+    public static CsvRow parse(String line) {
+        CsvRow csvRow = new CsvRow();
+        for (String column : line.split(SEPARATOR)) {
+            csvRow.add(column);
+        }
+        return csvRow;
+    }
+
+    public List<String> getColumns() {
+        return columns;
+    }
 }

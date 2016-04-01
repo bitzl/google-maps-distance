@@ -4,6 +4,8 @@ import com.bitzl.open.data.distance.heatmap.gather.model.Detail;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
@@ -38,5 +40,12 @@ public class CsvRowTest {
         Detail detail = null;
         row.add(detail);
         assertThat(row.toString(), is(CsvRow.SEPARATOR));
+    }
+
+    @Test
+    public void parseShouldCreateCsvRow() {
+        CsvRow csvRow = CsvRow.parse("a;bcd;;f");
+//        assertEquals(Arrays.asList("a", "bcd", "", "f"), csvRow.getColumns());
+        assertThat(csvRow.getColumns(), is(Arrays.asList("a", "bcd", "", "f")));
     }
 }
