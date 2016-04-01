@@ -1,8 +1,7 @@
 package com.bitzl.open.data.distance.heatmap.service;
 
-import com.bitzl.open.data.distance.heatmap.model.api.Detail;
-import com.bitzl.open.data.distance.heatmap.model.api.Route;
-import com.bitzl.open.data.distance.heatmap.model.api.TravelInfo;
+import com.bitzl.open.data.distance.heatmap.gather.model.Detail;
+import com.bitzl.open.data.distance.heatmap.gather.model.Route;
 import com.bitzl.open.data.distance.heatmap.model.location.Coordinate;
 import org.junit.Test;
 

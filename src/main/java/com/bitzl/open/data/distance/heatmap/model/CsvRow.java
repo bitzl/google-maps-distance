@@ -1,7 +1,7 @@
 package com.bitzl.open.data.distance.heatmap.model;
 
 
-import com.bitzl.open.data.distance.heatmap.model.api.Detail;
+import com.bitzl.open.data.distance.heatmap.gather.model.Detail;
 
 import java.util.ArrayList;
 import java.util.List;

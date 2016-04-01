@@ -1,6 +1,6 @@
 package com.bitzl.open.data.distance.heatmap.gather.apis;
 
-import com.bitzl.open.data.distance.heatmap.model.api.TravelInfo;
+import com.bitzl.open.data.distance.heatmap.gather.model.TravelInfo;
 import feign.Param;
 import feign.RequestLine;
 
