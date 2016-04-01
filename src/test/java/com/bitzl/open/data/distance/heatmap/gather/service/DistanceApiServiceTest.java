@@ -1,6 +1,7 @@
-package com.bitzl.open.data.distance.heatmap.service;
+package com.bitzl.open.data.distance.heatmap.gather.service;
 
 import com.bitzl.open.data.distance.heatmap.gather.apis.GoogleDistanceApi;
+import com.bitzl.open.data.distance.heatmap.gather.service.DistanceApiService;
 import com.bitzl.open.data.distance.heatmap.model.location.Coordinate;
 import org.junit.Before;
 import org.junit.Test;
