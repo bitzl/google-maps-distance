@@ -1,6 +1,6 @@
-package com.bitzl.open.data.distance.heatmap.config;
+package com.bitzl.open.data.distance.heatmap.gather.config;
 
-import com.bitzl.open.data.distance.heatmap.apis.GoogleDistanceApi;
+import com.bitzl.open.data.distance.heatmap.gather.apis.GoogleDistanceApi;
 import feign.Feign;
 import feign.gson.GsonDecoder;
 import org.springframework.context.annotation.Bean;

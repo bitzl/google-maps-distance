@@ -1,4 +1,4 @@
-package com.bitzl.open.data.distance.heatmap.model.api;
+package com.bitzl.open.data.distance.heatmap.gather.model;
 
 
 import com.google.gson.annotations.SerializedName;
