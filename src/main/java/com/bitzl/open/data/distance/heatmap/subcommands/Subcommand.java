@@ -15,6 +15,6 @@ public interface Subcommand {
      * Execute this subcommand.
      * @param params The command line parameter.
      */
-    void execute(String... params);
+    void execute(String... params) throws Exception;
 
 }
