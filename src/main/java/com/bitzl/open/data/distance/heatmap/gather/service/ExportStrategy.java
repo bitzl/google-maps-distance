@@ -1,4 +1,4 @@
-package com.bitzl.open.data.distance.heatmap.service;
+package com.bitzl.open.data.distance.heatmap.gather.service;
 
 import com.bitzl.open.data.distance.heatmap.model.CsvRow;
 import com.bitzl.open.data.distance.heatmap.gather.model.Route;
