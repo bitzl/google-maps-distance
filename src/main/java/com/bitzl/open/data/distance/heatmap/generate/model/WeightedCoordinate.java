@@ -1,6 +1,6 @@
 package com.bitzl.open.data.distance.heatmap.generate.model;
 
-import com.bitzl.open.data.distance.heatmap.model.location.Coordinate;
+import com.bitzl.open.data.distance.heatmap.core.model.location.Coordinate;
 
 
 public class WeightedCoordinate extends Coordinate {

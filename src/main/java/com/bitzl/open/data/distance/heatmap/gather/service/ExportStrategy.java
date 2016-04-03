@@ -1,10 +1,10 @@
 package com.bitzl.open.data.distance.heatmap.gather.service;
 
-import com.bitzl.open.data.distance.heatmap.model.CsvRow;
+import com.bitzl.open.data.distance.heatmap.core.model.csv.CsvRow;
 import com.bitzl.open.data.distance.heatmap.gather.model.Route;
 import com.bitzl.open.data.distance.heatmap.gather.model.Row;
 import com.bitzl.open.data.distance.heatmap.gather.model.TravelInfo;
-import com.bitzl.open.data.distance.heatmap.model.location.Coordinate;
+import com.bitzl.open.data.distance.heatmap.core.model.location.Coordinate;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

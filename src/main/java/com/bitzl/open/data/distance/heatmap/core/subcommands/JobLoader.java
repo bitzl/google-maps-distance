@@ -1,4 +1,4 @@
-package com.bitzl.open.data.distance.heatmap.subcommands;
+package com.bitzl.open.data.distance.heatmap.core.subcommands;
 
 
 import org.springframework.stereotype.Component;

@@ -1,7 +1,7 @@
 package com.bitzl.open.data.distance.heatmap;
 
 
-import com.bitzl.open.data.distance.heatmap.subcommands.Commandline;
+import com.bitzl.open.data.distance.heatmap.core.subcommands.Commandline;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

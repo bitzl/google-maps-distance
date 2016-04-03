@@ -1,4 +1,4 @@
-package com.bitzl.open.data.distance.heatmap.model.location;
+package com.bitzl.open.data.distance.heatmap.core.model.location;
 
 public class Range {
 

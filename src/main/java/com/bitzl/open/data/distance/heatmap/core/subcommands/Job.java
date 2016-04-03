@@ -1,8 +1,8 @@
-package com.bitzl.open.data.distance.heatmap.subcommands;
+package com.bitzl.open.data.distance.heatmap.core.subcommands;
 
 
-import com.bitzl.open.data.distance.heatmap.model.location.Coordinate;
-import com.bitzl.open.data.distance.heatmap.model.location.CoordinateRange;
+import com.bitzl.open.data.distance.heatmap.core.model.location.Coordinate;
+import com.bitzl.open.data.distance.heatmap.core.model.location.CoordinateRange;
 
 public class Job {
     private String apiKey;

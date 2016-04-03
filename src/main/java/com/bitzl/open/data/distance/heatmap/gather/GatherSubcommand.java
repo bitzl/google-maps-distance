@@ -3,10 +3,10 @@ package com.bitzl.open.data.distance.heatmap.gather;
 
 import com.bitzl.open.data.distance.heatmap.gather.model.TravelInfo;
 import com.bitzl.open.data.distance.heatmap.gather.service.DistanceApiService;
-import com.bitzl.open.data.distance.heatmap.model.location.Coordinate;
+import com.bitzl.open.data.distance.heatmap.core.model.location.Coordinate;
 import com.bitzl.open.data.distance.heatmap.gather.service.ExportService;
-import com.bitzl.open.data.distance.heatmap.subcommands.Job;
-import com.bitzl.open.data.distance.heatmap.subcommands.Subcommand;
+import com.bitzl.open.data.distance.heatmap.core.subcommands.Job;
+import com.bitzl.open.data.distance.heatmap.core.subcommands.Subcommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

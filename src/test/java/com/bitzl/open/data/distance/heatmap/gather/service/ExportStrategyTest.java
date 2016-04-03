@@ -2,7 +2,7 @@ package com.bitzl.open.data.distance.heatmap.gather.service;
 
 import com.bitzl.open.data.distance.heatmap.gather.model.Detail;
 import com.bitzl.open.data.distance.heatmap.gather.model.Route;
-import com.bitzl.open.data.distance.heatmap.model.location.Coordinate;
+import com.bitzl.open.data.distance.heatmap.core.model.location.Coordinate;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;

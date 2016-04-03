@@ -2,8 +2,8 @@ package com.bitzl.open.data.distance.heatmap.generate;
 
 import com.bitzl.open.data.distance.heatmap.generate.data.CsvImport;
 import com.bitzl.open.data.distance.heatmap.generate.model.Context;
-import com.bitzl.open.data.distance.heatmap.subcommands.Job;
-import com.bitzl.open.data.distance.heatmap.subcommands.Subcommand;
+import com.bitzl.open.data.distance.heatmap.core.subcommands.Job;
+import com.bitzl.open.data.distance.heatmap.core.subcommands.Subcommand;
 import com.github.mustachejava.DefaultMustacheFactory;
 import com.github.mustachejava.Mustache;
 import com.github.mustachejava.MustacheFactory;

@@ -1,5 +1,6 @@
-package com.bitzl.open.data.distance.heatmap.model;
+package com.bitzl.open.data.distance.heatmap.core.model;
 
+import com.bitzl.open.data.distance.heatmap.core.model.csv.CsvRow;
 import com.bitzl.open.data.distance.heatmap.gather.model.Detail;
 import org.junit.Before;
 import org.junit.Test;

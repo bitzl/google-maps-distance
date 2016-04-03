@@ -1,4 +1,4 @@
-package com.bitzl.open.data.distance.heatmap.model;
+package com.bitzl.open.data.distance.heatmap.core.model.csv;
 
 
 import com.bitzl.open.data.distance.heatmap.gather.model.Detail;

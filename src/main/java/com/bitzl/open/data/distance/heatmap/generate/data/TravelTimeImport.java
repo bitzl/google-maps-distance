@@ -1,7 +1,7 @@
 package com.bitzl.open.data.distance.heatmap.generate.data;
 
 import com.bitzl.open.data.distance.heatmap.generate.model.WeightedCoordinate;
-import com.bitzl.open.data.distance.heatmap.model.CsvRow;
+import com.bitzl.open.data.distance.heatmap.core.model.csv.CsvRow;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
