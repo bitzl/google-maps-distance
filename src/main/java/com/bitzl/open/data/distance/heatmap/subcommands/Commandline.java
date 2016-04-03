@@ -3,18 +3,18 @@ package com.bitzl.open.data.distance.heatmap.subcommands;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Component
 public class Commandline {
 
     private Map<String, Subcommand> subcommands;
 
+    private JobLoader jobLoader;
+
     @Autowired
-    public Commandline(Collection<Subcommand> subcommands) {
+    public Commandline(JobLoader jobLoader, Collection<Subcommand> subcommands) {
+        this.jobLoader = jobLoader;
         this.subcommands = new HashMap<>();
         register(subcommands);
     }
@@ -36,10 +36,12 @@ public class Commandline {
 
     public void execute(String[] args) throws Exception {
         String name = args[0];
+        String jobname = args[1];
         String[] params = {};
-        if (args.length > 1) {
-            params = Arrays.copyOfRange(args, 1, args.length);
+        if (args.length > 2) {
+            params = Arrays.copyOfRange(args, 2, args.length);
         }
-        subcommands.get(name).execute(params);
+        Job job = jobLoader.loadJob(jobname);
+        subcommands.get(name).execute(job, params);
     }
 }

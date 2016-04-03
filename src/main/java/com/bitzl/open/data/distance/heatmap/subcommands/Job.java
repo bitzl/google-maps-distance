@@ -1,4 +1,4 @@
-package com.bitzl.open.data.distance.heatmap.model.config;
+package com.bitzl.open.data.distance.heatmap.subcommands;
 
 
 import com.bitzl.open.data.distance.heatmap.model.location.Coordinate;

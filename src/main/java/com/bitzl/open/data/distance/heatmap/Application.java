@@ -30,14 +30,5 @@ public class Application implements CommandLineRunner {
         }
         commandline.execute(args);
         System.out.println("Done.");
-//
-//        Job job = new Yaml().loadAs(new FileInputStream(args[0]), Job.class);
-//
-//        List<Coordinate> origins = Coordinate.randomSample(job.getSamples(), job.getRange());
-//        Coordinate destination = job.getDestination();
-//
-//        TravelInfo travelInfo = distanceApiService.query(job.getApiKey(), origins, destination);
-//        exportService.save(job.getFile(), origins, travelInfo);
-
     }
 }
