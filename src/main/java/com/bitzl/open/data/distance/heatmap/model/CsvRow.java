@@ -53,4 +53,20 @@ public class CsvRow {
     public List<String> getColumns() {
         return columns;
     }
+
+    public double latitude() {
+        return Double.parseDouble(columns.get(0));
+    }
+
+    public double longitude() {
+        return Double.parseDouble(columns.get(1));
+    }
+
+    public double duration() {
+        return Double.parseDouble(columns.get(5));
+    }
+
+    public boolean hasData() {
+        return columns.size() >= 8 && "OK".equals(columns.get(7));
+    }
 }
