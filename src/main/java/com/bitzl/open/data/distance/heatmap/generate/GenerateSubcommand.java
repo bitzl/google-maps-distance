@@ -42,7 +42,7 @@ public class GenerateSubcommand implements Subcommand {
 
     private Context createViewModel(Job job) {
         Context context = new Context();
-        context.setApiKey(job.getApiKey());
+        context.setApiKey(job.getBrowserApiKey());
         context.setDestination(job.getDestination());
         context.setPoints(csvImport.load(job.getFile()));
         return context;

@@ -5,7 +5,9 @@
 
 This software creates a list of travel information from random locations to a certain destination using the Google Maps Distance API. Requirements are specified in a YAML file:
 
-    apiKey: API_KEY
+    keys:
+      server: SERVER_API_KEY
+      browser: BROWSER_API_KEY
     samples: 10
     file: marienplatz.csv
     destination:

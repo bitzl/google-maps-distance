@@ -36,7 +36,7 @@ public class GatherSubcommand implements Subcommand {
         List<Coordinate> origins = Coordinate.randomSample(job.getSamples(), job.getRange());
         Coordinate destination = job.getDestination();
 
-        TravelInfo travelInfo = distanceApiService.query(job.getApiKey(), origins, destination);
+        TravelInfo travelInfo = distanceApiService.query(job.getServerApiKey(), origins, destination);
         exportService.save(job.getFile(), origins, travelInfo);
     }
 }

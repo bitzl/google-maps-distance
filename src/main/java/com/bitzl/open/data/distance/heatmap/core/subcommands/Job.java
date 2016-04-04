@@ -4,19 +4,17 @@ package com.bitzl.open.data.distance.heatmap.core.subcommands;
 import com.bitzl.open.data.distance.heatmap.core.model.location.Coordinate;
 import com.bitzl.open.data.distance.heatmap.core.model.location.CoordinateRange;
 
+import java.util.Map;
+
 public class Job {
-    private String apiKey;
+    private Map<String, String> keys;
     private Coordinate destination;
     private String file;
     private int samples;
     private CoordinateRange range;
 
-    public String getApiKey() {
-        return apiKey;
-    }
-
-    public void setApiKey(String apiKey) {
-        this.apiKey = apiKey;
+    public void setKeys(Map<String, String> keys) {
+        this.keys = keys;
     }
 
     public Coordinate getDestination() {
@@ -51,4 +49,12 @@ public class Job {
         this.range = range;
     }
 
+    public String getServerApiKey() {
+        return keys.get("server");
+    }
+
+
+    public String getBrowserApiKey() {
+        return keys.get("browser");
+    }
 }
