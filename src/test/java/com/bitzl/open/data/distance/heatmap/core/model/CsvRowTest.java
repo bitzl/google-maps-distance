@@ -46,7 +46,21 @@ public class CsvRowTest {
     @Test
     public void parseShouldCreateCsvRow() {
         CsvRow csvRow = CsvRow.parse("a;bcd;;f");
-//        assertEquals(Arrays.asList("a", "bcd", "", "f"), csvRow.getColumns());
         assertThat(csvRow.getColumns(), is(Arrays.asList("a", "bcd", "", "f")));
+    }
+
+    @Test
+    public void hasDataShouldReturnTrueForRowsWithData() {
+        CsvRow row = CsvRow.parse("48.590264446317505;11.773361339672915;Eichenfeld 42, 84104 Rudelzhausen, " +
+                "Germany;80330.0;80.3 km;5588.0;1 hour 33 mins;OK");
+        assertThat(row.hasData(), is(true));
+    }
+
+
+    @Test
+    public void hasDataShouldReturnFalseForRowsWithoutData() {
+        CsvRow row = CsvRow.parse("48.56642844440023;11.409812087886086;48.566428444400231,11.409812087886086;" +
+                "ZERO_RESULTS");
+        assertThat(row.hasData(), is(false));
     }
 }

@@ -10,6 +10,7 @@ import com.github.mustachejava.MustacheFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.Writer;
 
@@ -40,7 +41,7 @@ public class GenerateSubcommand implements Subcommand {
         }
     }
 
-    private Context createViewModel(Job job) {
+    private Context createViewModel(Job job) throws FileNotFoundException {
         Context context = new Context();
         context.setApiKey(job.getBrowserApiKey());
         context.setDestination(job.getDestination());
