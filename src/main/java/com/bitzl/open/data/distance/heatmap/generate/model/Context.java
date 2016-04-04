@@ -13,8 +13,6 @@ public class Context {
 
     private String apiKey;
 
-    public Context() {}
-
     public Coordinate getDestination() {
         return destination;
     }

@@ -5,8 +5,6 @@ public class Range {
     private double min;
     private double max;
 
-    Range() {}
-
     public Range(double min, double max) {
         set(min, max);
     }
