@@ -5,10 +5,7 @@ import com.bitzl.open.data.distance.heatmap.core.model.location.Coordinate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
 import java.util.List;
 
 @Service
@@ -28,7 +25,7 @@ public class ExportService {
     }
 
     public void save(String filename, List<Coordinate> origins, TravelInfo travelInfo) throws IOException {
-        try (FileWriter writer = new FileWriter(filename, true)) {
+        try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(filename, true), "UTF-8"))) {
             if (fileIsEmpty(filename)) {
                 writeHeader(writer);
             }
