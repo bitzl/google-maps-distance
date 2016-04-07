@@ -1,6 +1,5 @@
-package com.bitzl.open.data.distance.heatmap.core.model;
+package com.bitzl.open.data.distance.heatmap.core.model.csv;
 
-import com.bitzl.open.data.distance.heatmap.core.model.csv.CsvRow;
 import com.bitzl.open.data.distance.heatmap.gather.model.Detail;
 import org.junit.Before;
 import org.junit.Test;
@@ -62,5 +61,23 @@ public class CsvRowTest {
         CsvRow row = CsvRow.parse("48.56642844440023;11.409812087886086;48.566428444400231,11.409812087886086;" +
                 "ZERO_RESULTS");
         assertThat(row.hasData(), is(false));
+    }
+
+    @Test
+    public void shouldReturnLatitude() {
+        CsvRow row = CsvRow.parse("123.4;23.4;1.2");
+        assertThat(row.latitude(), is(123.4));
+    }
+
+    @Test
+    public void shouldReturnLongitude() {
+        CsvRow row = CsvRow.parse("123.4;23.4;1.2");
+        assertThat(row.longitude(), is(23.4));
+    }
+
+    @Test
+    public void shouldReturnDuration() {
+        CsvRow row = CsvRow.parse("123.4;23.4;1.2;0;0;999;");
+        assertThat(row.duration(), is(999.0));
     }
 }
