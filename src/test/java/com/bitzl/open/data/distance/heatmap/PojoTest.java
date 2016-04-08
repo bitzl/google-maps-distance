@@ -1,4 +1,4 @@
-package com.bitzl.open.data.distance.heatmap.gather.model;
+package com.bitzl.open.data.distance.heatmap;
 
 import com.openpojo.validation.Validator;
 import com.openpojo.validation.ValidatorBuilder;
