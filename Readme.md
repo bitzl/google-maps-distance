@@ -1,6 +1,7 @@
 # Travel Distance Matrix
 [![Build Status](https://travis-ci.org/bitzl/google-maps-distance.svg?branch=master)](https://travis-ci.org/bitzl/google-maps-distance)
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/a24430385df647fca92368e0e9c1a4cf)](https://www.codacy.com/app/marcus_2/google-maps-distance)
+[![codecov.io](https://codecov.io/github/bitzl/google-maps-distance/coverage.svg?branch=master)](https://codecov.io/github/bitzl/google-maps-distance?branch=master)
 [![Apache License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 
 This software creates a list of travel information from random locations to a certain destination using the Google Maps Distance API. Requirements are specified in a YAML file:
