@@ -17,7 +17,7 @@ public class JobTest {
                 .with(new GetterTester())
                 .with(new SetterTester())
                 .build();
-        validator.validate(getPojoClass(Job.class));
+        validator.validate(getPojoClass(YamlJob.class));
     }
 
 }

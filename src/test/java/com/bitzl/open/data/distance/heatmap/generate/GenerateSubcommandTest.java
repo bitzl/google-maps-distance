@@ -3,6 +3,7 @@ package com.bitzl.open.data.distance.heatmap.generate;
 
 import com.bitzl.open.data.distance.heatmap.core.model.location.Coordinate;
 import com.bitzl.open.data.distance.heatmap.core.subcommands.Job;
+import com.bitzl.open.data.distance.heatmap.core.subcommands.YamlJob;
 import com.bitzl.open.data.distance.heatmap.generate.data.CsvImport;
 import com.bitzl.open.data.distance.heatmap.generate.model.WeightedCoordinate;
 import com.bitzl.open.data.distance.heatmap.generate.service.WriterService;
@@ -40,7 +41,7 @@ public class GenerateSubcommandTest {
         when(writerService.createWriter()).thenReturn(writer);
 
         subcommand = new GenerateSubcommand(csvImport, writerService);
-        Job job = mock(Job.class);
+        Job job = mock(YamlJob.class);
         when(job.getBrowserApiKey()).thenReturn("TEST_API_KEY");
         Coordinate destination = new Coordinate(22, 33);
         when(job.getDestination()).thenReturn(destination);

@@ -1,0 +1,66 @@
+package com.bitzl.open.data.distance.heatmap.core.subcommands;
+
+
+import com.bitzl.open.data.distance.heatmap.core.model.location.Coordinate;
+import com.bitzl.open.data.distance.heatmap.core.model.location.CoordinateRange;
+
+import java.util.Map;
+
+public class YamlJob implements Job {
+    private Map<String, String> keys;
+    private Coordinate destination;
+    private String file;
+    private int samples;
+    private CoordinateRange range;
+
+    public void setKeys(Map<String, String> keys) {
+        this.keys = keys;
+    }
+
+    @Override
+    public Coordinate getDestination() {
+        return destination;
+    }
+
+    public void setDestination(Coordinate destination) {
+        this.destination = destination;
+    }
+
+    @Override
+    public String getFile() {
+        return file;
+    }
+
+    public void setFile(String file) {
+        this.file = file;
+    }
+
+    @Override
+    public int getSamples() {
+        return samples;
+    }
+
+    public void setSamples(int samples) {
+        this.samples = samples;
+    }
+
+    @Override
+    public CoordinateRange getRange() {
+        return range;
+    }
+
+    public void setRange(CoordinateRange range) {
+        this.range = range;
+    }
+
+    @Override
+    public String getServerApiKey() {
+        return keys.get("server");
+    }
+
+
+    @Override
+    public String getBrowserApiKey() {
+        return keys.get("browser");
+    }
+}

@@ -14,7 +14,7 @@ import java.io.FileNotFoundException;
 public class JobLoader {
 
     public Job loadJob(String filename) throws FileNotFoundException {
-        return new Yaml().loadAs(new FileInputStream(filename), Job.class);
+        return new Yaml().loadAs(new FileInputStream(filename), YamlJob.class);
     }
 
 }
